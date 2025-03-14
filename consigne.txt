@@ -51,7 +51,6 @@ Créer plusieurs personnes avec Model.create(), en utilisant l'argument de la fo
  
 
 Utiliser model.find() pour rechercher dans votre base de données
-
 Trouvez toutes les personnes ayant un nom donné, en utilisant Model.find() -> ; [Person]
  
 
