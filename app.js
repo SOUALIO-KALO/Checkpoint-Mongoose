@@ -88,7 +88,7 @@ const findPerson = () => {
 findPerson();
 */
 
-/* Utilisez model.findOne() pour renvoyer un seul document correspondant de votre base de données */
+/* Utilisez model.findOne() pour renvoyer un seul document correspondant de votre base de données 
 const findPersonByFood = (food) => {
   Person.findOne({ favoriteFoods: food })
     .then((doc) => {
@@ -106,3 +106,26 @@ const findPersonByFood = (food) => {
 };
 
 findPersonByFood("Riz");
+*/
+
+/* Utilisez model.findById() pour rechercher votre base de données par _id 
+const findPersonById = (personId) => {
+  Person.findById(personId)
+    .then((doc) => {
+      doc
+        ? console.log(`✅ Documents trouvés : ${doc}`)
+        : console.log(`⚠️ Aucun document trouvé pour cette recherche`);
+    })
+    .catch((err) => {
+      console.error(`❌ Erreur de recherche : ${err.message}`);
+    })
+    .finally(() => {
+      mongoose.connection.close();
+      console.log(`🔌Connection fermée`);
+    });
+};
+
+findPersonById("67d3b5dca1647a78392b1382");
+*/
+
+/* Exécutez des mises à jour classiques en exécutant Find, Edit, puis Save */
