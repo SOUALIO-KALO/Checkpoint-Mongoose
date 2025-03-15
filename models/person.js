@@ -14,7 +14,7 @@ const personSchema = new mongoose.Schema(
     email: {
       type: String, // Champ de type String (chaîne de caractères)
       required: true, // Champ obligatoire
-      unique: true, // Champ unique
+      // unique: true, // Champ unique
     },
     favoriteFoods: {
       type: [String], // Champ de type tableau contenant des chaînes de caractères (array of strings)
